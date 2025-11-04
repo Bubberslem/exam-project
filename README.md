@@ -57,7 +57,7 @@ Notes:
 - Either use dev.http or see the endpoints above to call the API endpoints.
 
 
-## Skill enrichment (external API) Couldn't Get this to work properly but would have had these features
+## Skill enrichment (external API) Couldn't get this to work properly due to running out of time but would have had these features
 
 When retrieving a candidate by id the application will call the external Skill Stats API once (passing multiple slugs) to enrich each skill with:
 - popularityScore
