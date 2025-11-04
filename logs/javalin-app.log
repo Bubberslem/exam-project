@@ -1,0 +1,982 @@
+2025-11-03 20:18:03 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:18:03 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:18:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:18:03 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@63a270c9
+2025-11-03 20:18:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:18:04 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "trip" does not exist, skipping
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "guide" does not exist, skipping
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "roles" does not exist, skipping
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "trip" does not exist, skipping
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "user_roles" does not exist, skipping
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 20:18:05 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-11-03 20:18:05 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:18:05 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:18:05 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:18:05 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@59933644{/api,null,AVAILABLE}
+2025-11-03 20:18:05 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7534785a{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:18:05 [main] INFO  org.eclipse.jetty.server.Server - Started Server@c732e1c{STARTING}[11.0.23,sto=0] @4355ms
+2025-11-03 20:18:05 [main] INFO  io.javalin.Javalin - Javalin started in 165ms \o/
+2025-11-03 20:18:05 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:18:05 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:18:13 [JettyServerThreadPool-31] INFO  dat.config.ApplicationConfig -  Request 1 - GET /api/ was handled with status code 200 OK
+2025-11-03 20:18:23 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 2 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:18:50 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-03 20:18:56 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:19:01 [JettyServerThreadPool-30] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-03 20:19:01 [JettyServerThreadPool-30] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-03 20:19:05 [JettyServerThreadPool-29] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:19:11 [JettyServerThreadPool-31] INFO  dat.config.ApplicationConfig -  Request 7 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:19:13 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 8 - GET /api/trip was handled with status code 200 OK
+2025-11-03 20:19:22 [JettyServerThreadPool-30] INFO  dat.config.ApplicationConfig -  Request 9 - GET /api/trip was handled with status code 200 OK
+2025-11-03 20:20:01 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 10 - GET /api/trip/1 was handled with status code 200 OK
+2025-11-03 20:20:14 [JettyServerThreadPool-28] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:20:14 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 11 - POST /api/trip was handled with status code 201 Created
+2025-11-03 20:20:33 [JettyServerThreadPool-29] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:20:33 [JettyServerThreadPool-29] INFO  dat.config.ApplicationConfig -  Request 12 - PUT /api/trip/8 was handled with status code 200 OK
+2025-11-03 20:22:31 [JettyServerThreadPool-31] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:22:31 [JettyServerThreadPool-31] INFO  dat.config.ApplicationConfig -  Request 13 - PUT /api/trip/8 was handled with status code 200 OK
+2025-11-03 20:22:48 [JettyServerThreadPool-28] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:22:48 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 14 - PUT /api/trip/assign/8/guide/1 was handled with status code 200 OK
+2025-11-03 20:23:01 [JettyServerThreadPool-29] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:23:01 [JettyServerThreadPool-29] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 20:23:01 [JettyServerThreadPool-29] INFO  dat.config.ApplicationConfig -  Request 15 - DELETE /api/trip/8 was handled with status code 200 OK
+2025-11-03 20:23:48 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 16 - GET /api/trip/8 was handled with status code 200 OK
+2025-11-03 20:24:01 [JettyServerThreadPool-29] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:24:01 [JettyServerThreadPool-29] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 20:24:01 [JettyServerThreadPool-29] INFO  dat.config.ApplicationConfig -  Request 17 - DELETE /api/trip/8 was handled with status code 200 OK
+2025-11-03 20:30:49 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:30:49 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:30:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:30:50 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6bea52d4
+2025-11-03 20:30:50 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:30:50 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:30:52 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:30:52 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:30:52 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:30:52 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@36238b12{/api,null,AVAILABLE}
+2025-11-03 20:30:52 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7ab33ca8{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:30:52 [main] INFO  org.eclipse.jetty.server.Server - Started Server@592a1882{STARTING}[11.0.23,sto=0] @3042ms
+2025-11-03 20:30:52 [main] INFO  io.javalin.Javalin - Javalin started in 172ms \o/
+2025-11-03 20:30:52 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:30:52 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:30:54 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 1 - GET /api/ was handled with status code 200 OK
+2025-11-03 20:31:00 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 2 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:31:13 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/login/ was handled with status code 401 Unauthorized
+2025-11-03 20:31:16 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-03 20:31:21 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:31:23 [JettyServerThreadPool-23] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-03 20:31:23 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-03 20:31:25 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 7 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:31:27 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 8 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:31:29 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 9 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:31:35 [JettyServerThreadPool-26] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-11-03 20:31:35 [JettyServerThreadPool-26] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "guide_guide_phone_key"
+  Detail: Key (guide_phone)=(10203040) already exists.
+2025-11-03 20:31:35 [JettyServerThreadPool-26] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 20:31:35 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 10 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:31:55 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 11 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:32:09 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 12 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:32:19 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:32:20 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 13 - POST /api/trip was handled with status code 201 Created
+2025-11-03 20:32:23 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 14 - GET /api/trip was handled with status code 200 OK
+2025-11-03 20:33:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:33:07 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:33:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:33:07 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a2c13a8
+2025-11-03 20:33:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:33:08 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:33:09 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:33:09 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:33:09 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:33:09 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@6ed51944{/api,null,AVAILABLE}
+2025-11-03 20:33:09 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@67e6eb52{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:33:09 [main] INFO  org.eclipse.jetty.server.Server - Started Server@5d27b4c1{STARTING}[11.0.23,sto=0] @3030ms
+2025-11-03 20:33:09 [main] INFO  io.javalin.Javalin - Javalin started in 155ms \o/
+2025-11-03 20:33:09 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:33:09 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:33:29 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-03 20:33:31 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:33:34 [JettyServerThreadPool-26] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-03 20:33:34 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-03 20:33:36 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:33:39 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:33:42 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 6 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:33:56 [JettyServerThreadPool-28] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-11-03 20:33:56 [JettyServerThreadPool-28] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "guide_guide_phone_key"
+  Detail: Key (guide_phone)=(10203040) already exists.
+2025-11-03 20:33:56 [JettyServerThreadPool-28] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 20:33:56 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 7 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:34:35 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:34:35 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:34:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:34:36 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@758a34ce
+2025-11-03 20:34:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:34:36 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:34:38 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:34:38 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:34:38 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:34:38 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@708769b7{/api,null,AVAILABLE}
+2025-11-03 20:34:38 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@844e66d{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:34:38 [main] INFO  org.eclipse.jetty.server.Server - Started Server@1209a0f{STARTING}[11.0.23,sto=0] @3060ms
+2025-11-03 20:34:38 [main] INFO  io.javalin.Javalin - Javalin started in 191ms \o/
+2025-11-03 20:34:38 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:34:38 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:35:05 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-03 20:35:14 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:35:19 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-03 20:35:19 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-03 20:35:43 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:35:50 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:37:12 [JettyServerThreadPool-24] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-11-03 20:37:12 [JettyServerThreadPool-24] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "guide_guide_phone_key"
+  Detail: Key (guide_phone)=(10203040) already exists.
+2025-11-03 20:37:12 [JettyServerThreadPool-24] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 20:37:12 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:37:41 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 7 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:38:12 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:38:12 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:38:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:38:12 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5644dc81
+2025-11-03 20:38:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:38:13 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:38:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:38:27 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:38:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:38:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@246f8b8b
+2025-11-03 20:38:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:38:27 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:38:29 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:38:29 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:38:29 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+2025-11-03 20:38:29 [main] INFO  org.eclipse.jetty.server.Server - Stopped Server@5c573229{STOPPING}[11.0.23,sto=0]
+2025-11-03 20:38:37 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 8 - GET /api/trip was handled with status code 404 Not Found
+2025-11-03 20:38:43 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:38:43 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:38:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:38:44 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6bea52d4
+2025-11-03 20:38:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:38:44 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:38:46 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:38:46 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:38:46 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:38:46 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@36238b12{/api,null,AVAILABLE}
+2025-11-03 20:38:46 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7ab33ca8{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:38:46 [main] INFO  org.eclipse.jetty.server.Server - Started Server@592a1882{STARTING}[11.0.23,sto=0] @3090ms
+2025-11-03 20:38:46 [main] INFO  io.javalin.Javalin - Javalin started in 169ms \o/
+2025-11-03 20:38:46 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:38:46 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:38:48 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 1 - GET /api/ was handled with status code 200 OK
+2025-11-03 20:38:55 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:40:26 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:40:26 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:40:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:40:26 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4351c8c3
+2025-11-03 20:40:26 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:40:27 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:40:28 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:40:28 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:40:28 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:40:28 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@33187485{/api,null,AVAILABLE}
+2025-11-03 20:40:28 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@704d3b00{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:40:28 [main] INFO  org.eclipse.jetty.server.Server - Started Server@48368a08{STARTING}[11.0.23,sto=0] @3138ms
+2025-11-03 20:40:28 [main] INFO  io.javalin.Javalin - Javalin started in 180ms \o/
+2025-11-03 20:40:28 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:40:28 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:40:32 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:41:54 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:41:54 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:41:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:41:54 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4351c8c3
+2025-11-03 20:41:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:41:55 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:41:56 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:41:56 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:41:56 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:41:56 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@33187485{/api,null,AVAILABLE}
+2025-11-03 20:41:56 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@704d3b00{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:41:56 [main] INFO  org.eclipse.jetty.server.Server - Started Server@48368a08{STARTING}[11.0.23,sto=0] @3144ms
+2025-11-03 20:41:56 [main] INFO  io.javalin.Javalin - Javalin started in 183ms \o/
+2025-11-03 20:41:56 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:41:56 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:44:58 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 20:45:06 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-03 20:45:08 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:45:09 [JettyServerThreadPool-21] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-03 20:45:09 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-03 20:45:11 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:45:13 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 6 - GET /api/trip was handled with status code 200 OK
+2025-11-03 20:45:17 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 7 - GET /api/trip/1 was handled with status code 200 OK
+2025-11-03 20:45:19 [JettyServerThreadPool-25] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:45:19 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 8 - POST /api/trip was handled with status code 201 Created
+2025-11-03 20:45:21 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:45:21 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 9 - PUT /api/trip/8 was handled with status code 200 OK
+2025-11-03 20:45:25 [JettyServerThreadPool-21] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:45:25 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 10 - PUT /api/trip/assign/8/guide/1 was handled with status code 200 OK
+2025-11-03 20:45:27 [JettyServerThreadPool-26] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:45:27 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 11 - DELETE /api/trip/8 was handled with status code 204 No Content
+2025-11-03 20:45:32 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 12 - GET /api/trip/8 was handled with status code 400 Bad Request
+2025-11-03 20:45:58 [JettyServerThreadPool-21] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:45:58 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 13 - PUT /api/trip/8 was handled with status code 400 Bad Request
+2025-11-03 20:46:00 [JettyServerThreadPool-25] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:46:00 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 14 - POST /api/trip was handled with status code 201 Created
+2025-11-03 20:46:11 [JettyServerThreadPool-26] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-03 20:46:11 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 15 - DELETE /api/trip/9 was handled with status code 204 No Content
+2025-11-03 20:48:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 20:48:29 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 20:48:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 20:48:30 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@758a34ce
+2025-11-03 20:48:30 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 20:48:30 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 20:48:32 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 20:48:32 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 20:48:32 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 20:48:32 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5bb97fe7{/api,null,AVAILABLE}
+2025-11-03 20:48:32 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@75ed7512{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 20:48:32 [main] INFO  org.eclipse.jetty.server.Server - Started Server@577f9dfd{STARTING}[11.0.23,sto=0] @3231ms
+2025-11-03 20:48:32 [main] INFO  io.javalin.Javalin - Javalin started in 167ms \o/
+2025-11-03 20:48:32 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 20:48:32 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 20:48:43 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-03 20:48:47 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:48:48 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-03 20:48:48 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-03 20:48:50 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 20:48:51 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 21:00:40 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 21:00:40 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 21:00:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 21:00:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@758a34ce
+2025-11-03 21:00:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 21:00:41 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:00:42 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 21:00:42 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 21:00:42 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 21:00:42 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5bb97fe7{/api,null,AVAILABLE}
+2025-11-03 21:00:42 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@75ed7512{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:00:42 [main] INFO  org.eclipse.jetty.server.Server - Started Server@577f9dfd{STARTING}[11.0.23,sto=0] @3118ms
+2025-11-03 21:00:42 [main] INFO  io.javalin.Javalin - Javalin started in 165ms \o/
+2025-11-03 21:00:42 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 21:00:42 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 21:00:47 [JettyServerThreadPool-28] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 21:00:47 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 21:00:53 [JettyServerThreadPool-23] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 21:00:53 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 21:00:56 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-03 21:00:57 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 21:00:57 [JettyServerThreadPool-22] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-03 21:00:57 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-03 21:01:00 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-03 21:01:01 [JettyServerThreadPool-28] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 21:01:01 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 7 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 21:04:13 [main] WARN  o.t.u.TestcontainersConfiguration - Attempted to read Testcontainers configuration file at file:/C:/Users/rasmu/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: C:\Users\rasmu\.testcontainers.properties (The system cannot find the file specified)
+2025-11-03 21:04:13 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-03 21:04:14 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-11-03 21:04:14 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-03 21:04:14 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 15948 MB
+2025-11-03 21:04:14 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling docker image: testcontainers/ryuk:0.4.0. Please be patient; this may take some time but only needs to be done once.
+2025-11-03 21:04:15 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-11-03 21:04:16 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Starting to pull image
+2025-11-03 21:04:16 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-03 21:04:17 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling image layers:  2 pending,  1 downloaded,  0 extracted, (0 bytes/? MB)
+2025-11-03 21:04:17 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling image layers:  1 pending,  2 downloaded,  0 extracted, (0 bytes/? MB)
+2025-11-03 21:04:17 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling image layers:  0 pending,  3 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-03 21:04:17 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling image layers:  0 pending,  3 downloaded,  1 extracted, (2 bytes/0 bytes)
+2025-11-03 21:04:17 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling image layers:  0 pending,  3 downloaded,  2 extracted, (2 bytes/0 bytes)
+2025-11-03 21:04:17 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pulling image layers:  0 pending,  3 downloaded,  3 extracted, (2 bytes/0 bytes)
+2025-11-03 21:04:17 [docker-java-stream-1392295776] INFO  tc.testcontainers/ryuk:0.4.0 - Pull complete. 3 layers, pulled in 1s (downloaded 2 bytes at 2 bytes/s)
+2025-11-03 21:04:17 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Creating container for image: testcontainers/ryuk:0.4.0
+2025-11-03 21:04:18 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 is starting: 88b8f6f0ae2b4ac773560bee1acd703aee13c1f151e07ae3f62ed2bf6f722cdd
+2025-11-03 21:04:18 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 started in PT3.6871623S
+2025-11-03 21:04:18 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-03 21:04:18 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-03 21:04:18 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-03 21:04:18 [main] INFO  tc.postgres:15-alpine - Pulling docker image: postgres:15-alpine. Please be patient; this may take some time but only needs to be done once.
+2025-11-03 21:04:19 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Starting to pull image
+2025-11-03 21:04:19 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers: 10 pending,  1 downloaded,  0 extracted, (0 bytes/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  9 pending,  2 downloaded,  0 extracted, (0 bytes/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  8 pending,  3 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  7 pending,  4 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  6 pending,  5 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  5 pending,  6 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  4 pending,  7 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  3 pending,  8 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  2 pending,  9 downloaded,  0 extracted, (3 MB/? MB)
+2025-11-03 21:04:20 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  1 pending, 10 downloaded,  0 extracted, (7 MB/? MB)
+2025-11-03 21:04:21 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  1 pending, 10 downloaded,  1 extracted, (19 MB/? MB)
+2025-11-03 21:04:21 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  1 pending, 10 downloaded,  2 extracted, (19 MB/? MB)
+2025-11-03 21:04:21 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  1 pending, 10 downloaded,  3 extracted, (19 MB/? MB)
+2025-11-03 21:04:21 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  1 pending, 10 downloaded,  4 extracted, (24 MB/? MB)
+2025-11-03 21:04:21 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  1 pending, 10 downloaded,  5 extracted, (24 MB/? MB)
+2025-11-03 21:04:23 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending, 11 downloaded,  5 extracted, (102 MB/103 MB)
+2025-11-03 21:04:24 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending, 11 downloaded,  6 extracted, (102 MB/103 MB)
+2025-11-03 21:04:24 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending, 11 downloaded,  7 extracted, (102 MB/103 MB)
+2025-11-03 21:04:24 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending, 11 downloaded,  8 extracted, (102 MB/103 MB)
+2025-11-03 21:04:24 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending, 11 downloaded,  9 extracted, (102 MB/103 MB)
+2025-11-03 21:04:24 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending, 11 downloaded, 10 extracted, (102 MB/103 MB)
+2025-11-03 21:04:24 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pulling image layers:  0 pending, 11 downloaded, 11 extracted, (102 MB/103 MB)
+2025-11-03 21:04:24 [docker-java-stream--667418021] INFO  tc.postgres:15-alpine - Pull complete. 11 layers, pulled in 5s (downloaded 102 MB at 20 MB/s)
+2025-11-03 21:04:25 [main] INFO  tc.postgres:15-alpine - Creating container for image: postgres:15-alpine
+2025-11-03 21:04:25 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine is starting: 07379a16c1e73841416dbfe2a0c553b9ee9aad7733d9f74ef8db3768c9f8a4f3
+2025-11-03 21:04:27 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine started in PT8.544355S
+2025-11-03 21:04:27 [main] INFO  tc.postgres:15-alpine - Container is started (JDBC URL: jdbc:postgresql://localhost:50138/testdb?loggerLevel=OFF)
+2025-11-03 21:04:27 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 21:04:27 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 21:04:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 21:04:27 [main] INFO  tc.postgres:15.3-alpine3.18 - Pulling docker image: postgres:15.3-alpine3.18. Please be patient; this may take some time but only needs to be done once.
+2025-11-03 21:04:28 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Starting to pull image
+2025-11-03 21:04:28 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  0 pending,  0 downloaded,  0 extracted, (0 bytes/0 bytes)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  7 pending,  1 downloaded,  0 extracted, (5 MB/? MB)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  6 pending,  2 downloaded,  0 extracted, (13 MB/? MB)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  5 pending,  3 downloaded,  0 extracted, (13 MB/? MB)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  4 pending,  4 downloaded,  0 extracted, (15 MB/? MB)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  3 pending,  5 downloaded,  0 extracted, (15 MB/? MB)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  2 pending,  6 downloaded,  0 extracted, (20 MB/? MB)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  1 pending,  7 downloaded,  0 extracted, (20 MB/? MB)
+2025-11-03 21:04:29 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  1 pending,  7 downloaded,  1 extracted, (24 MB/? MB)
+2025-11-03 21:04:30 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  1 pending,  7 downloaded,  2 extracted, (29 MB/? MB)
+2025-11-03 21:04:30 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  1 pending,  7 downloaded,  3 extracted, (29 MB/? MB)
+2025-11-03 21:04:31 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  0 pending,  8 downloaded,  3 extracted, (86 MB/89 MB)
+2025-11-03 21:04:33 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  0 pending,  8 downloaded,  4 extracted, (86 MB/89 MB)
+2025-11-03 21:04:33 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  0 pending,  8 downloaded,  5 extracted, (86 MB/89 MB)
+2025-11-03 21:04:33 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  0 pending,  8 downloaded,  6 extracted, (86 MB/89 MB)
+2025-11-03 21:04:33 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  0 pending,  8 downloaded,  7 extracted, (86 MB/89 MB)
+2025-11-03 21:04:33 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pulling image layers:  0 pending,  8 downloaded,  8 extracted, (86 MB/89 MB)
+2025-11-03 21:04:33 [docker-java-stream--745261128] INFO  tc.postgres:15.3-alpine3.18 - Pull complete. 8 layers, pulled in 4s (downloaded 86 MB at 21 MB/s)
+2025-11-03 21:04:33 [main] INFO  tc.postgres:15.3-alpine3.18 - Creating container for image: postgres:15.3-alpine3.18
+2025-11-03 21:04:33 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 is starting: 2552b550862d0f58aaeac9039309b385704b45ce07aaae69a38272a992d7495e
+2025-11-03 21:04:35 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 started in PT7.5586675S
+2025-11-03 21:04:35 [main] INFO  tc.postgres:15.3-alpine3.18 - Container is started (JDBC URL: jdbc:postgresql://localhost:50156/test?loggerLevel=OFF)
+2025-11-03 21:04:35 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@696988b8
+2025-11-03 21:04:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 21:04:36 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "trip" does not exist, skipping
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "guide" does not exist, skipping
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "roles" does not exist, skipping
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "trip" does not exist, skipping
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "user_roles" does not exist, skipping
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:04:38 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-11-03 21:04:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-03 21:04:38 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@7cc66b1c
+2025-11-03 21:04:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-03 21:04:38 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:04:39 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 21:04:39 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 21:04:39 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 21:04:39 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2b233a29{/api,null,AVAILABLE}
+2025-11-03 21:04:39 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@3b7d5550{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:04:39 [main] INFO  org.eclipse.jetty.server.Server - Started Server@2686f6d3{STARTING}[11.0.23,sto=0] @27750ms
+2025-11-03 21:04:39 [main] INFO  io.javalin.Javalin - Javalin started in 315ms \o/
+2025-11-03 21:04:39 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 21:04:39 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 21:04:42 [JettyServerThreadPool-58] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/v1/auth/register was handled with status code 404 Not Found
+2025-11-03 21:04:42 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+2025-11-03 21:04:42 [main] INFO  org.eclipse.jetty.server.Server - Stopped Server@2686f6d3{STOPPING}[11.0.23,sto=0]
+2025-11-03 21:04:42 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@3b7d5550{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:04:42 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2b233a29{/api,null,STOPPED}
+2025-11-03 21:04:42 [main] INFO  io.javalin.Javalin - Javalin has stopped
+2025-11-03 21:04:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-03 21:04:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-03 21:09:58 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 21:09:58 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 21:09:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 21:09:59 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@774698ab
+2025-11-03 21:09:59 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 21:09:59 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:10:01 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 21:10:01 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 21:10:01 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 21:10:01 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@525b8922{/api,null,AVAILABLE}
+2025-11-03 21:10:01 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4b85edeb{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:10:01 [main] INFO  org.eclipse.jetty.server.Server - Started Server@7e5e6573{STARTING}[11.0.23,sto=0] @2941ms
+2025-11-03 21:10:01 [main] INFO  io.javalin.Javalin - Javalin started in 170ms \o/
+2025-11-03 21:10:01 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 21:10:01 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 21:13:16 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-03 21:13:16 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-03 21:13:17 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-11-03 21:13:17 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-03 21:13:17 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 15948 MB
+2025-11-03 21:13:17 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Creating container for image: testcontainers/ryuk:0.4.0
+2025-11-03 21:13:17 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-11-03 21:13:17 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 is starting: f944fae3089b099949648134ffe6549d08accf7cece53e30273605e9f0091d57
+2025-11-03 21:13:17 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 started in PT0.7704526S
+2025-11-03 21:13:17 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-03 21:13:17 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-03 21:13:17 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-03 21:13:17 [main] INFO  tc.postgres:15-alpine - Creating container for image: postgres:15-alpine
+2025-11-03 21:13:17 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine is starting: 19fe6e66a59078981ad9f1a8370b0baaa42ab492b49d48407bf42a176bf1d481
+2025-11-03 21:13:19 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine started in PT2.0130352S
+2025-11-03 21:13:19 [main] INFO  tc.postgres:15-alpine - Container is started (JDBC URL: jdbc:postgresql://localhost:50452/testdb?loggerLevel=OFF)
+2025-11-03 21:13:19 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 21:13:19 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 21:13:20 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 21:13:20 [main] INFO  tc.postgres:15.3-alpine3.18 - Creating container for image: postgres:15.3-alpine3.18
+2025-11-03 21:13:20 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 is starting: 6a20903d525166ebafb1618d32bbdb9a7acdf80b6bfee7e1bb64422bf3cb3bf9
+2025-11-03 21:13:22 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 started in PT2.1308438S
+2025-11-03 21:13:22 [main] INFO  tc.postgres:15.3-alpine3.18 - Container is started (JDBC URL: jdbc:postgresql://localhost:50454/test?loggerLevel=OFF)
+2025-11-03 21:13:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@3722c145
+2025-11-03 21:13:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 21:13:22 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "trip" does not exist, skipping
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "guide" does not exist, skipping
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "roles" does not exist, skipping
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "trip" does not exist, skipping
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "user_roles" does not exist, skipping
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:13:23 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-11-03 21:13:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-03 21:13:23 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@1534bdc6
+2025-11-03 21:13:23 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-03 21:13:23 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:13:24 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 21:13:24 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 21:13:24 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 21:13:24 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@44c2e8a8{/api,null,AVAILABLE}
+2025-11-03 21:13:24 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@58ad0586{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:13:24 [main] INFO  org.eclipse.jetty.server.Server - Started Server@2ec156fb{STARTING}[11.0.23,sto=0] @8791ms
+2025-11-03 21:13:24 [main] INFO  io.javalin.Javalin - Javalin started in 176ms \o/
+2025-11-03 21:13:24 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 21:13:24 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 21:13:25 [JettyServerThreadPool-49] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/v1/auth/register was handled with status code 404 Not Found
+2025-11-03 21:13:25 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+2025-11-03 21:13:25 [main] INFO  org.eclipse.jetty.server.Server - Stopped Server@2ec156fb{STOPPING}[11.0.23,sto=0]
+2025-11-03 21:13:25 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@58ad0586{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:13:25 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@44c2e8a8{/api,null,STOPPED}
+2025-11-03 21:13:25 [main] INFO  io.javalin.Javalin - Javalin has stopped
+2025-11-03 21:13:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-03 21:13:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-03 21:15:08 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-03 21:15:09 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-03 21:15:09 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-11-03 21:15:09 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-03 21:15:09 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 15948 MB
+2025-11-03 21:15:09 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Creating container for image: testcontainers/ryuk:0.4.0
+2025-11-03 21:15:09 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-11-03 21:15:09 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 is starting: 3d09d88928d056bc47c25e1309739ce849e426c2cf701e99b4f5b287eea85c4b
+2025-11-03 21:15:10 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 started in PT0.7780253S
+2025-11-03 21:15:10 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-03 21:15:10 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-03 21:15:10 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-03 21:15:10 [main] INFO  tc.postgres:15-alpine - Creating container for image: postgres:15-alpine
+2025-11-03 21:15:10 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine is starting: 2d5b8047fbea5db4e0a33d6070019eeb957b2029a580b3b7d60aa6f2410c2a12
+2025-11-03 21:15:12 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine started in PT2.0245347S
+2025-11-03 21:15:12 [main] INFO  tc.postgres:15-alpine - Container is started (JDBC URL: jdbc:postgresql://localhost:50522/testdb?loggerLevel=OFF)
+2025-11-03 21:15:12 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 21:15:12 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 21:15:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 21:15:12 [main] INFO  tc.postgres:15.3-alpine3.18 - Creating container for image: postgres:15.3-alpine3.18
+2025-11-03 21:15:12 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 is starting: a95ca109574a71ca1d30bbb58764529262fc184ba6de83f5ba4436e07e706bda
+2025-11-03 21:15:14 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 started in PT2.1145535S
+2025-11-03 21:15:14 [main] INFO  tc.postgres:15.3-alpine3.18 - Container is started (JDBC URL: jdbc:postgresql://localhost:50524/test?loggerLevel=OFF)
+2025-11-03 21:15:14 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@2975a9e
+2025-11-03 21:15:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 21:15:15 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "trip" does not exist, skipping
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "guide" does not exist, skipping
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "roles" does not exist, skipping
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "trip" does not exist, skipping
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "user_roles" does not exist, skipping
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:15:16 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-11-03 21:15:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-03 21:15:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@1b3bb287
+2025-11-03 21:15:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-03 21:15:16 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:15:16 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 21:15:16 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 21:15:16 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 21:15:16 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@750c23a3{/api,null,AVAILABLE}
+2025-11-03 21:15:16 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4ae6451d{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:15:16 [main] INFO  org.eclipse.jetty.server.Server - Started Server@780dbed7{STARTING}[11.0.23,sto=0] @8792ms
+2025-11-03 21:15:16 [main] INFO  io.javalin.Javalin - Javalin started in 168ms \o/
+2025-11-03 21:15:16 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 21:15:16 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 21:15:18 [JettyServerThreadPool-52] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register was handled with status code 201 Created
+2025-11-03 21:15:18 [JettyServerThreadPool-47] INFO  dat.config.ApplicationConfig -  Request 2 - GET /api/v1/guide/1 was handled with status code 404 Not Found
+2025-11-03 21:15:18 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/api/v1/guide was handled with status code 404 Not Found
+2025-11-03 21:15:18 [JettyServerThreadPool-45] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/api/v1/guide was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-46] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/v1/guide was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-50] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/v1/trip was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-52] INFO  dat.config.ApplicationConfig -  Request 7 - GET /api/v1/guide was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-47] INFO  dat.config.ApplicationConfig -  Request 8 - POST /api/api/v1/trip/populate was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 9 - POST /api/v1/trip was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-45] INFO  dat.config.ApplicationConfig -  Request 10 - POST /api/api/v1/trip was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-50] INFO  dat.config.ApplicationConfig -  Request 11 - GET /api/v1/trip/1 was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-52] INFO  dat.config.ApplicationConfig -  Request 12 - GET /api/v1/trip was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-47] INFO  dat.config.ApplicationConfig -  Request 13 - POST /api/api/v1/guide was handled with status code 404 Not Found
+2025-11-03 21:15:19 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 14 - POST /api/api/v1/trip/populate was handled with status code 404 Not Found
+2025-11-03 21:15:19 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+2025-11-03 21:15:19 [main] INFO  org.eclipse.jetty.server.Server - Stopped Server@780dbed7{STOPPING}[11.0.23,sto=0]
+2025-11-03 21:15:19 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4ae6451d{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:15:19 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@750c23a3{/api,null,STOPPED}
+2025-11-03 21:15:19 [main] INFO  io.javalin.Javalin - Javalin has stopped
+2025-11-03 21:15:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-03 21:15:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-03 21:17:07 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-03 21:17:07 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-03 21:17:07 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-11-03 21:17:07 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-03 21:17:07 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 15948 MB
+2025-11-03 21:17:07 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Creating container for image: testcontainers/ryuk:0.4.0
+2025-11-03 21:17:08 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-11-03 21:17:08 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 is starting: 0aea847c672117d02de8524e6cc0ddc5311cb18d4da9a42253e09dbf23cd1b37
+2025-11-03 21:17:08 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 started in PT0.7549472S
+2025-11-03 21:17:08 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-03 21:17:08 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-03 21:17:08 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-03 21:17:08 [main] INFO  tc.postgres:15-alpine - Creating container for image: postgres:15-alpine
+2025-11-03 21:17:08 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine is starting: 508df1f21b0034c588646806e934b7e6cfa2fc2bef2982ec87d0c8044857c927
+2025-11-03 21:17:10 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine started in PT1.9368773S
+2025-11-03 21:17:10 [main] INFO  tc.postgres:15-alpine - Container is started (JDBC URL: jdbc:postgresql://localhost:50593/testdb?loggerLevel=OFF)
+2025-11-03 21:17:10 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-03 21:17:10 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-03 21:17:10 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-03 21:17:10 [main] INFO  tc.postgres:15.3-alpine3.18 - Creating container for image: postgres:15.3-alpine3.18
+2025-11-03 21:17:10 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 is starting: f61a196b8d4a8767ad363c3f15225dc7f1da70a5cbbbd01c44c9c05eca33fa39
+2025-11-03 21:17:12 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 started in PT2.045264S
+2025-11-03 21:17:12 [main] INFO  tc.postgres:15.3-alpine3.18 - Container is started (JDBC URL: jdbc:postgresql://localhost:50594/test?loggerLevel=OFF)
+2025-11-03 21:17:12 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@70730db
+2025-11-03 21:17:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-03 21:17:13 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "trip" does not exist, skipping
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "guide" does not exist, skipping
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "roles" does not exist, skipping
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "trip" does not exist, skipping
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "user_roles" does not exist, skipping
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-03 21:17:14 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-11-03 21:17:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-03 21:17:14 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@32428874
+2025-11-03 21:17:14 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-03 21:17:14 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-03 21:17:14 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-03 21:17:14 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-03 21:17:14 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-03 21:17:14 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3879feec{/api,null,AVAILABLE}
+2025-11-03 21:17:14 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@731fae{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:17:14 [main] INFO  org.eclipse.jetty.server.Server - Started Server@301e5d23{STARTING}[11.0.23,sto=0] @8623ms
+2025-11-03 21:17:14 [main] INFO  io.javalin.Javalin - Javalin started in 170ms \o/
+2025-11-03 21:17:14 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-03 21:17:14 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-03 21:17:16 [JettyServerThreadPool-52] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register was handled with status code 201 Created
+2025-11-03 21:17:17 [JettyServerThreadPool-46] INFO  dat.config.ApplicationConfig -  Request 2 - GET /api/guide/1 was handled with status code 200 OK
+2025-11-03 21:17:17 [JettyServerThreadPool-48] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/guide was handled with status code 201 Created
+2025-11-03 21:17:17 [JettyServerThreadPool-45] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-45] INFO  dat.config.ApplicationConfig -  Request 4 - DELETE /api/guide/2 was handled with status code 204 No Content
+2025-11-03 21:17:17 [JettyServerThreadPool-47] INFO  dat.config.ApplicationConfig -  Request 5 - GET /api/guide/2 was handled with status code 400 Bad Request
+2025-11-03 21:17:17 [JettyServerThreadPool-51] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-51] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/guide was handled with status code 201 Created
+2025-11-03 21:17:17 [JettyServerThreadPool-52] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-52] INFO  dat.config.ApplicationConfig -  Request 7 - PUT /api/guide/2 was handled with status code 200 OK
+2025-11-03 21:17:17 [JettyServerThreadPool-46] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-46] INFO  dat.config.ApplicationConfig -  Request 8 - POST /api/guide was handled with status code 201 Created
+2025-11-03 21:17:17 [JettyServerThreadPool-48] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 9 - POST /api/trip was handled with status code 201 Created
+2025-11-03 21:17:17 [JettyServerThreadPool-48] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 10 - PUT /api/trip/2 was handled with status code 200 OK
+2025-11-03 21:17:17 [JettyServerThreadPool-59] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 21:17:17 [JettyServerThreadPool-59] INFO  dat.config.ApplicationConfig -  Request 11 - GET /api/guide was handled with status code 200 OK
+2025-11-03 21:17:17 [JettyServerThreadPool-47] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-11-03 21:17:17 [JettyServerThreadPool-47] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "guide_guide_phone_key"
+  Detail: Key (guide_phone)=(10203040) already exists.
+2025-11-03 21:17:17 [JettyServerThreadPool-47] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 21:17:17 [JettyServerThreadPool-47] INFO  dat.config.ApplicationConfig -  Request 12 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 21:17:17 [JettyServerThreadPool-50] INFO  io.javalin.Javalin - Couldn't convert param 'id' with value 'category' to Integer
+2025-11-03 21:17:17 [JettyServerThreadPool-50] INFO  dat.config.ApplicationConfig -  Request 13 - GET /api/trip/category was handled with status code 400 Bad Request
+2025-11-03 21:17:17 [JettyServerThreadPool-51] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:17 [JettyServerThreadPool-51] INFO  dat.config.ApplicationConfig -  Request 14 - POST /api/trip was handled with status code 201 Created
+2025-11-03 21:17:18 [JettyServerThreadPool-48] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:18 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 15 - POST /api/trip was handled with status code 201 Created
+2025-11-03 21:17:18 [JettyServerThreadPool-59] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:18 [JettyServerThreadPool-59] INFO  dat.config.ApplicationConfig -  Request 16 - DELETE /api/trip/2 was handled with status code 204 No Content
+2025-11-03 21:17:18 [JettyServerThreadPool-47] INFO  dat.config.ApplicationConfig -  Request 17 - GET /api/trip/2 was handled with status code 400 Bad Request
+2025-11-03 21:17:18 [JettyServerThreadPool-50] INFO  dat.config.ApplicationConfig -  Request 18 - GET /api/trip/1 was handled with status code 200 OK
+2025-11-03 21:17:18 [JettyServerThreadPool-51] INFO  dat.config.ApplicationConfig -  Request 19 - GET /api/trip was handled with status code 200 OK
+2025-11-03 21:17:18 [JettyServerThreadPool-48] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:18 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 20 - POST /api/guide was handled with status code 201 Created
+2025-11-03 21:17:18 [JettyServerThreadPool-59] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:18 [JettyServerThreadPool-59] INFO  dat.config.ApplicationConfig -  Request 21 - POST /api/guide was handled with status code 201 Created
+2025-11-03 21:17:18 [JettyServerThreadPool-47] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:18 [JettyServerThreadPool-47] INFO  dat.config.ApplicationConfig -  Request 22 - POST /api/trip was handled with status code 201 Created
+2025-11-03 21:17:18 [JettyServerThreadPool-50] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=testuser, password=null, roles=[USER])
+2025-11-03 21:17:18 [JettyServerThreadPool-50] INFO  dat.config.ApplicationConfig -  Request 23 - PUT /api/trip/assign/2/guide/3 was handled with status code 200 OK
+2025-11-03 21:17:18 [JettyServerThreadPool-51] INFO  dat.config.ApplicationConfig -  Request 24 - GET /api/trip/2 was handled with status code 200 OK
+2025-11-03 21:17:18 [JettyServerThreadPool-48] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-11-03 21:17:18 [JettyServerThreadPool-48] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "guide_guide_phone_key"
+  Detail: Key (guide_phone)=(10203040) already exists.
+2025-11-03 21:17:18 [JettyServerThreadPool-48] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-03 21:17:18 [JettyServerThreadPool-48] INFO  dat.config.ApplicationConfig -  Request 25 - POST /api/trip/populate was handled with status code 200 OK
+2025-11-03 21:17:18 [JettyServerThreadPool-59] INFO  dat.config.ApplicationConfig -  Request 26 - GET /api/trip/guide/totalprice was handled with status code 200 OK
+2025-11-03 21:17:18 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+2025-11-03 21:17:18 [main] INFO  org.eclipse.jetty.server.Server - Stopped Server@301e5d23{STOPPING}[11.0.23,sto=0]
+2025-11-03 21:17:18 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@731fae{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-03 21:17:18 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3879feec{/api,null,STOPPED}
+2025-11-03 21:17:18 [main] INFO  io.javalin.Javalin - Javalin has stopped
+2025-11-03 21:17:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-03 21:17:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-04 11:21:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 11:21:16 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 11:21:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 11:21:17 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d2ee678
+2025-11-04 11:21:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 11:21:17 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "candidate_skill" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "candidate_skill" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "candidate" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "candidate_skill" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "roles" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "skill" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "user_roles" does not exist, skipping
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 11:21:18 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-11-04 11:21:19 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 11:21:19 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 11:21:19 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 11:21:19 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@ee2ae9a{/api,null,AVAILABLE}
+2025-11-04 11:21:19 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@5c9e8a67{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 11:21:19 [main] INFO  org.eclipse.jetty.server.Server - Started Server@44384b4a{STARTING}[11.0.23,sto=0] @4456ms
+2025-11-04 11:21:19 [main] INFO  io.javalin.Javalin - Javalin started in 184ms \o/
+2025-11-04 11:21:19 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 11:21:19 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 11:21:26 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - GET /api/ was handled with status code 200 OK
+2025-11-04 11:21:32 [JettyServerThreadPool-30] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-04 11:21:35 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 11:21:39 [JettyServerThreadPool-32] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-04 11:21:39 [JettyServerThreadPool-32] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-04 11:21:42 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 11:21:45 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/candidate/populate was handled with status code 404 Not Found
+2025-11-04 11:21:54 [JettyServerThreadPool-30] INFO  dat.config.ApplicationConfig -  Request 7 - GET /api/candidate was handled with status code 404 Not Found
+2025-11-04 11:22:22 [JettyServerThreadPool-27] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-04 11:22:22 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 8 - POST /api/candidates/populate was handled with status code 200 OK
+2025-11-04 11:22:39 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 9 - GET /api/candidates was handled with status code 200 OK
+2025-11-04 11:25:55 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 11:25:55 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 11:25:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 11:25:55 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b1f29fa
+2025-11-04 11:25:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 11:25:56 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 11:25:57 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 11:25:57 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 11:25:58 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 11:25:58 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2c674d58{/api,null,AVAILABLE}
+2025-11-04 11:25:58 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@1fb6b8fb{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 11:25:58 [main] INFO  org.eclipse.jetty.server.Server - Started Server@cdbe995{STARTING}[11.0.23,sto=0] @3557ms
+2025-11-04 11:25:58 [main] INFO  io.javalin.Javalin - Javalin started in 166ms \o/
+2025-11-04 11:25:58 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 11:25:58 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 11:26:05 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-04 11:26:05 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 11:26:06 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-04 11:26:06 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-04 11:26:08 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 11:26:09 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-04 11:27:35 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 6 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 11:27:47 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 7 - GET /api/candidate/1 was handled with status code 200 OK
+2025-11-04 12:23:57 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 12:23:57 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 12:23:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 12:23:57 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66b7550d
+2025-11-04 12:23:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 12:23:57 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 12:23:59 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 12:23:59 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 12:23:59 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 12:23:59 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@131ba005{/api,null,AVAILABLE}
+2025-11-04 12:23:59 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@3dfe92ef{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 12:23:59 [main] INFO  org.eclipse.jetty.server.Server - Started Server@2b395581{STARTING}[11.0.23,sto=0] @3042ms
+2025-11-04 12:23:59 [main] INFO  io.javalin.Javalin - Javalin started in 150ms \o/
+2025-11-04 12:23:59 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 12:23:59 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 12:24:25 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-04 12:24:29 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 12:24:31 [JettyServerThreadPool-26] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-04 12:24:31 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-04 12:24:34 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 12:24:38 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-04 12:24:42 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/skills was handled with status code 404 Not Found
+2025-11-04 12:24:49 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:24:49 [JettyServerThreadPool-24] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-04 12:24:49 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 7 - POST /api/skill was handled with status code 200 OK
+2025-11-04 12:25:28 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 8 - POST /api/skills was handled with status code 404 Not Found
+2025-11-04 12:25:33 [JettyServerThreadPool-22] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:25:33 [JettyServerThreadPool-22] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-04 12:25:33 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 9 - POST /api/skill was handled with status code 200 OK
+2025-11-04 12:31:24 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 10 - GET /api/skills was handled with status code 404 Not Found
+2025-11-04 12:32:44 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 11 - GET /api/candidates was handled with status code 404 Not Found
+2025-11-04 12:33:25 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 12 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:33:44 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 13 - GET /api/skill was handled with status code 200 OK
+2025-11-04 12:33:52 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 14 - GET /api/skill was handled with status code 200 OK
+2025-11-04 12:34:01 [JettyServerThreadPool-26] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:34:01 [JettyServerThreadPool-26] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-04 12:34:01 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 15 - POST /api/skill was handled with status code 200 OK
+2025-11-04 12:38:19 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 12:38:19 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 12:38:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 12:38:20 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@758a34ce
+2025-11-04 12:38:20 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 12:38:20 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 12:38:22 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 12:38:22 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 12:38:22 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 12:38:22 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@314f59b{/api,null,AVAILABLE}
+2025-11-04 12:38:22 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@ee2ae9a{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 12:38:22 [main] INFO  org.eclipse.jetty.server.Server - Started Server@5353dd09{STARTING}[11.0.23,sto=0] @3392ms
+2025-11-04 12:38:22 [main] INFO  io.javalin.Javalin - Javalin started in 158ms \o/
+2025-11-04 12:38:22 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 12:38:22 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 12:38:33 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-04 12:38:34 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 12:38:35 [JettyServerThreadPool-28] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-04 12:38:35 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-04 12:38:36 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 12:38:40 [JettyServerThreadPool-22] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-04 12:38:44 [JettyServerThreadPool-27] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:38:45 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 6 - POST /api/skill was handled with status code 201 Created
+2025-11-04 12:38:52 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:38:52 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 7 - POST /api/skill was handled with status code 201 Created
+2025-11-04 12:38:56 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 8 - GET /api/skill was handled with status code 200 OK
+2025-11-04 12:39:04 [JettyServerThreadPool-26] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:39:04 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 9 - POST /api/candidate was handled with status code 201 Created
+2025-11-04 12:39:15 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 10 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:39:21 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 11 - GET /api/candidate/3 was handled with status code 200 OK
+2025-11-04 12:39:59 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 12 - GET /api/candidate/1 was handled with status code 200 OK
+2025-11-04 12:40:09 [JettyServerThreadPool-27] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:40:09 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 13 - PUT /api/candidate/3 was handled with status code 200 OK
+2025-11-04 12:40:26 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 14 - PUT /api/candidate/3/skill/6 was handled with status code 404 Not Found
+2025-11-04 12:40:37 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 15 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:40:51 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:40:51 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 16 - DELETE /api/candidate/3 was handled with status code 204 No Content
+2025-11-04 12:41:02 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 17 - GET /api/candidate/3 was handled with status code 400 Bad Request
+2025-11-04 12:41:09 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 18 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:41:17 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 19 - GET /api/candidate/3 was handled with status code 400 Bad Request
+2025-11-04 12:41:21 [JettyServerThreadPool-21] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:41:21 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 20 - PUT /api/candidate/3 was handled with status code 400 Bad Request
+2025-11-04 12:41:26 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 21 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:41:39 [JettyServerThreadPool-26] INFO  dat.config.ApplicationConfig -  Request 22 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:42:07 [JettyServerThreadPool-28] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:42:07 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 23 - POST /api/candidate was handled with status code 201 Created
+2025-11-04 12:42:13 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:42:13 [JettyServerThreadPool-24] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-11-04 12:42:13 [JettyServerThreadPool-24] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "candidate_phone_key"
+  Detail: Key (phone)=(12345678) already exists.
+2025-11-04 12:42:13 [JettyServerThreadPool-24] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-04 12:42:13 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 24 - POST /api/candidate was handled with status code 200 OK
+2025-11-04 12:42:18 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 25 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:51:16 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 12:51:16 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 12:51:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 12:51:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66b7550d
+2025-11-04 12:51:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 12:51:17 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 12:52:07 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 12:52:07 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 12:52:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 12:52:07 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b1f29fa
+2025-11-04 12:52:07 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 12:52:08 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 12:52:09 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 12:52:09 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 12:52:09 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 12:52:09 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3c07e830{/api,null,AVAILABLE}
+2025-11-04 12:52:09 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@149d7cc6{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 12:52:09 [main] INFO  org.eclipse.jetty.server.Server - Started Server@7dd45c93{STARTING}[11.0.23,sto=0] @2928ms
+2025-11-04 12:52:09 [main] INFO  io.javalin.Javalin - Javalin started in 147ms \o/
+2025-11-04 12:52:09 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 12:52:09 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 12:52:15 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-04 12:52:17 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 12:52:18 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[user])
+2025-11-04 12:52:18 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/user/addrole/ was handled with status code 200 OK
+2025-11-04 12:52:32 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-04 12:52:34 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-04 12:53:07 [JettyServerThreadPool-24] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:53:07 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 6 - PUT /api/candidate/1/skill/3 was handled with status code 200 OK
+2025-11-04 12:53:25 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 7 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:55:05 [JettyServerThreadPool-23] INFO  d.s.controllers.SecurityController - User verified: UserDTO(username=user, password=null, roles=[ADMIN, user])
+2025-11-04 12:55:05 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 8 - DELETE /api/candidate/2 was handled with status code 204 No Content
+2025-11-04 12:55:07 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 9 - GET /api/candidate/2 was handled with status code 400 Bad Request
+2025-11-04 12:57:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 12:57:24 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 12:57:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 12:57:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6bea52d4
+2025-11-04 12:57:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 12:57:25 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 12:57:27 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 12:57:27 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 12:57:27 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 12:57:27 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1f71e024{/api,null,AVAILABLE}
+2025-11-04 12:57:27 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@671d97bc{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 12:57:27 [main] INFO  org.eclipse.jetty.server.Server - Started Server@166ce247{STARTING}[11.0.23,sto=0] @3162ms
+2025-11-04 12:57:27 [main] INFO  io.javalin.Javalin - Javalin started in 179ms \o/
+2025-11-04 12:57:27 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 12:57:27 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 12:57:32 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:57:42 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-04 12:57:47 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 12:57:59 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 13:12:57 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 13:12:57 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 13:12:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 13:12:58 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@774698ab
+2025-11-04 13:12:58 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 13:12:58 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 13:13:00 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 13:13:00 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 13:13:00 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 13:13:00 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@2eb6d34a{/api,null,AVAILABLE}
+2025-11-04 13:13:00 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2712e8f4{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 13:13:00 [main] INFO  org.eclipse.jetty.server.Server - Started Server@53ba1175{STARTING}[11.0.23,sto=0] @3165ms
+2025-11-04 13:13:00 [main] INFO  io.javalin.Javalin - Javalin started in 148ms \o/
+2025-11-04 13:13:00 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 13:13:00 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 13:13:11 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-04 13:13:18 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 2 - GET /api/candidate was handled with status code 200 OK
+2025-11-04 13:17:11 [main] INFO  o.t.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-11-04 13:17:11 [main] INFO  o.t.d.DockerClientProviderStrategy - Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-11-04 13:17:11 [main] INFO  o.t.d.DockerClientProviderStrategy - Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2025-11-04 13:17:11 [main] INFO  o.testcontainers.DockerClientFactory - Docker host IP address is localhost
+2025-11-04 13:17:11 [main] INFO  o.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 28.0.4
+  API Version: 1.48
+  Operating System: Docker Desktop
+  Total Memory: 15948 MB
+2025-11-04 13:17:11 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Creating container for image: testcontainers/ryuk:0.4.0
+2025-11-04 13:17:12 [main] INFO  o.t.utility.RegistryAuthLocator - Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+2025-11-04 13:17:12 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 is starting: eca10650ab7fb64d3976992f861533dc76f791519f5b07f6a19db6b39d76a4f2
+2025-11-04 13:17:12 [main] INFO  tc.testcontainers/ryuk:0.4.0 - Container testcontainers/ryuk:0.4.0 started in PT0.9973753S
+2025-11-04 13:17:12 [main] INFO  o.t.utility.RyukResourceReaper - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-11-04 13:17:12 [main] INFO  o.testcontainers.DockerClientFactory - Checking the system...
+2025-11-04 13:17:12 [main] INFO  o.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+2025-11-04 13:17:12 [main] INFO  tc.postgres:15-alpine - Creating container for image: postgres:15-alpine
+2025-11-04 13:17:12 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine is starting: 0c1ec7aa03e7611f3848fd04ce07ac6f06751fdd9593f05b25ddce6dabb41f5f
+2025-11-04 13:17:14 [main] INFO  tc.postgres:15-alpine - Container postgres:15-alpine started in PT2.2277082S
+2025-11-04 13:17:14 [main] INFO  tc.postgres:15-alpine - Container is started (JDBC URL: jdbc:postgresql://localhost:50640/testdb?loggerLevel=OFF)
+2025-11-04 13:17:15 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-04 13:17:15 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-04 13:17:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-04 13:17:15 [main] INFO  tc.postgres:15.3-alpine3.18 - Creating container for image: postgres:15.3-alpine3.18
+2025-11-04 13:17:15 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 is starting: d59bf9da28ac4d09f61e9f104cb9e0e4bb77143d815e355824e437695e6efde3
+2025-11-04 13:17:17 [main] INFO  tc.postgres:15.3-alpine3.18 - Container postgres:15.3-alpine3.18 started in PT2.1985478S
+2025-11-04 13:17:17 [main] INFO  tc.postgres:15.3-alpine3.18 - Container is started (JDBC URL: jdbc:postgresql://localhost:50643/test?loggerLevel=OFF)
+2025-11-04 13:17:17 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.testcontainers.jdbc.ConnectionWrapper@37c36608
+2025-11-04 13:17:17 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-04 13:17:18 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "candidate_skill" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "candidate_skill" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "user_roles" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "candidate" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "candidate_skill" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "roles" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "skill" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "user_roles" does not exist, skipping
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+2025-11-04 13:17:19 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+2025-11-04 13:17:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-04 13:17:19 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.testcontainers.jdbc.ConnectionWrapper@df6f19b
+2025-11-04 13:17:19 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-04 13:17:19 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-04 13:17:19 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-04 13:17:19 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-04 13:17:19 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-04 13:17:19 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4b20aa21{/api,null,AVAILABLE}
+2025-11-04 13:17:19 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@3ff53704{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 13:17:19 [main] INFO  org.eclipse.jetty.server.Server - Started Server@17034458{STARTING}[11.0.23,sto=0] @9639ms
+2025-11-04 13:17:19 [main] INFO  io.javalin.Javalin - Javalin started in 177ms \o/
+2025-11-04 13:17:19 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-04 13:17:19 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 438 days old. Consider checking for a newer version.).
+2025-11-04 13:17:21 [JettyServerThreadPool-52] INFO  dat.config.ApplicationConfig -  Request 1 - GET /api/skill/1 was handled with status code 200 OK
+2025-11-04 13:17:21 [JettyServerThreadPool-46] INFO  dat.config.ApplicationConfig -  Request 2 - GET /api/candidate/1 was handled with status code 200 OK
+2025-11-04 13:17:22 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+2025-11-04 13:17:22 [main] INFO  org.eclipse.jetty.server.Server - Stopped Server@17034458{STOPPING}[11.0.23,sto=0]
+2025-11-04 13:17:22 [main] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@3ff53704{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-04 13:17:22 [main] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@4b20aa21{/api,null,STOPPED}
+2025-11-04 13:17:22 [main] INFO  io.javalin.Javalin - Javalin has stopped
+2025-11-04 13:17:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-04 13:17:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,0 +1,201 @@
+###────────────────────────────────────────────
+### 1) Register
+### ─────────────────────────────────────────────────────────────────
+POST {{url}}/auth/register/
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "test123"
+}
+
+### ─────────────────────────────────────────────────────────────────
+### 2) Login → store JWT
+### ─────────────────────────────────────────────────────────────────
+POST {{url}}/auth/login/
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "test123"
+}
+> {%
+    client.global.set("jwt_token", response.body.token);
+    client.log("jwt_token set");
+%}
+
+### ─────────────────────────────────────────────────────────────────
+### 3) Make user ADMIN (hvis din sikkerhed kræver roller)
+### ─────────────────────────────────────────────────────────────────
+POST {{url}}/auth/user/addrole/
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "role": "ADMIN"
+}
+
+### 3a) Re-login efter rolleændring
+POST {{url}}/auth/login/
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "test123"
+}
+> {%
+    client.global.set("jwt_token", response.body.token);
+    client.log("Refreshed jwt_token after role assignment");
+%}
+
+### ─────────────────────────────────────────────────────────────────
+### 4) (Optional) Populate sample data
+### ─────────────────────────────────────────────────────────────────
+POST {{url}}/candidate/populate
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 5) Create Skill → capture skill_id
+### ─────────────────────────────────────────────────────────────────
+POST {{url}}/skill
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Java",
+  "category": "PROG_LANG",
+  "description": "General purpose language"
+}
+> {%
+    client.global.set("skill_id", response.body.id);
+    client.log("skill_id = " + response.body.id);
+%}
+
+### Create another Skill (optional)
+POST {{url}}/skill
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "PostgreSQL",
+  "category": "DB",
+  "description": "Relational database"
+}
+> {%
+    client.global.set("skill2_id", response.body.id);
+    client.log("skill2_id = " + response.body.id);
+%}
+
+### ─────────────────────────────────────────────────────────────────
+### 6) Get all Skills
+### ─────────────────────────────────────────────────────────────────
+GET {{url}}/skill
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 7) Create Candidate (link eksisterende skill via id) → capture candidate_id
+### ─────────────────────────────────────────────────────────────────
+POST {{url}}/candidate
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Alice Andersen",
+  "phone": "12345678",
+  "educationBackground": "Computer Science",
+  "skills": [
+    { "id": {{skill_id}} }
+  ]
+}
+> {%
+    client.global.set("candidate_id", response.body.id);
+    client.log("candidate_id = " + response.body.id);
+%}
+
+### ─────────────────────────────────────────────────────────────────
+### 8) GET all Candidates
+### ─────────────────────────────────────────────────────────────────
+GET {{url}}/candidate
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+> {%
+    client.log("Candidates count: " + response.body.length);
+%}
+
+### ─────────────────────────────────────────────────────────────────
+### 9) GET Candidate by ID (skal indeholde enrichment af skills)
+### ─────────────────────────────────────────────────────────────────
+GET {{url}}/candidate/{{candidate_id}}
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 9.a) GET Candidate by ID
+### ─────────────────────────────────────────────────────────────────
+GET {{url}}/candidate/1
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 10) Update Candidate (PUT)
+### ─────────────────────────────────────────────────────────────────
+PUT {{url}}/candidate/{{candidate_id}}
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Alice A.",
+  "phone": "12345678",
+  "educationBackground": "Updated CS"
+}
+
+### ─────────────────────────────────────────────────────────────────
+### 11) Link existing Skill to Candidate (PUT /{candidateId}/skill/{skillId})
+### ─────────────────────────────────────────────────────────────────
+PUT {{url}}/candidate/1/skill/3
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 12) Filter Candidates by Skill Category (query param)
+### ─────────────────────────────────────────────────────────────────
+GET {{url}}/candidate?category=DB
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 13) Report: Top candidate by average popularity
+### ─────────────────────────────────────────────────────────────────
+GET {{url}}/reports/candidate/top-by-popularity
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 14) Delete Candidate
+### ─────────────────────────────────────────────────────────────────
+DELETE {{url}}/candidate/2
+Authorization: Bearer {{jwt_token}}
+
+### Verify deletion (should be 404/Not Found)
+GET {{url}}/candidate/2
+Accept: application/json
+Authorization: Bearer {{jwt_token}}
+
+### ─────────────────────────────────────────────────────────────────
+### 15) Negative test: Unauthorized access
+### ─────────────────────────────────────────────────────────────────
+GET {{url}}/candidate
+
+### ─────────────────────────────────────────────────────────────────
+### 16) Conflict test: unique phone
+### ─────────────────────────────────────────────────────────────────
+POST {{url}}/candidate
+Content-Type: application/json
+Authorization: Bearer {{jwt_token}}
+
+{
+  "name": "Bob",
+  "phone": "12345678",
+  "educationBackground": "SE"
+}
