@@ -980,3 +980,69 @@
 2025-11-04 13:17:22 [main] INFO  io.javalin.Javalin - Javalin has stopped
 2025-11-04 13:17:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-11-04 13:17:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-10 16:43:03 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-10 16:43:03 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-10 16:43:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-10 16:43:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55dfcc6
+2025-11-10 16:43:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-10 16:43:05 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-10 16:43:08 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-10 16:43:08 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-10 16:43:08 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-10 16:43:08 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@316d30ad{/api,null,AVAILABLE}
+2025-11-10 16:43:08 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@8ac12e6{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-10 16:43:08 [main] INFO  org.eclipse.jetty.server.Server - Started Server@3dc82e6a{STARTING}[11.0.23,sto=0] @6590ms
+2025-11-10 16:43:08 [main] INFO  io.javalin.Javalin - Javalin started in 169ms \o/
+2025-11-10 16:43:08 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-10 16:43:08 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 444 days old. Consider checking for a newer version.).
+2025-11-10 16:44:20 [JettyServerThreadPool-31] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/login/ was handled with status code 401 Unauthorized
+2025-11-10 16:44:23 [JettyServerThreadPool-30] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-10 16:44:25 [JettyServerThreadPool-32] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-10 16:44:36 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-10 16:46:07 [JettyServerThreadPool-25] INFO  dat.config.ApplicationConfig -  Request 5 - GET /api/candidate was handled with status code 200 OK
+2025-11-10 16:47:43 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 6 - GET /api/candidate was handled with status code 200 OK
+2025-11-10 17:24:38 [JettyServerThreadPool-27] WARN  dat.config.ApplicationConfig - An API exception occurred: Code: 400, Message: User with username: user already exists
+2025-11-10 17:24:38 [JettyServerThreadPool-27] INFO  dat.config.ApplicationConfig -  Request 7 - POST /api/auth/register/ was handled with status code 400 Bad Request
+2025-11-10 17:24:42 [JettyServerThreadPool-31] INFO  dat.config.ApplicationConfig -  Request 8 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-10 17:24:56 [JettyServerThreadPool-30] INFO  dat.config.ApplicationConfig -  Request 9 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-10 17:25:00 [JettyServerThreadPool-32] INFO  dat.config.ApplicationConfig -  Request 10 - POST /api/auth/login/ was handled with status code 200 OK
+2025-11-10 17:26:39 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-10 17:26:39 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-10 17:26:39 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-10 17:26:39 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@246f8b8b
+2025-11-10 17:26:39 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-10 17:26:40 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-10 17:26:41 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-10 17:26:41 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-10 17:26:41 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-10 17:26:41 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@49986178{/api,null,AVAILABLE}
+2025-11-10 17:26:41 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@47eaf55c{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-10 17:26:41 [main] INFO  org.eclipse.jetty.server.Server - Started Server@395a573c{STARTING}[11.0.23,sto=0] @3101ms
+2025-11-10 17:26:41 [main] INFO  io.javalin.Javalin - Javalin started in 152ms \o/
+2025-11-10 17:26:41 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-10 17:26:41 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 445 days old. Consider checking for a newer version.).
+2025-11-10 17:26:46 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/auth/register/ was handled with status code 201 Created
+2025-11-10 17:35:51 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.4.Final
+2025-11-10 17:35:51 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2025-11-10 17:35:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-10 17:35:51 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b1f29fa
+2025-11-10 17:35:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-10 17:35:52 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2025-11-10 17:35:54 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+2025-11-10 17:35:54 [main] INFO  org.eclipse.jetty.server.Server - jetty-11.0.23; built: 2024-08-14T01:40:17.906Z; git: 6fcf5ccaebd7ca13a0cb96c96adca699a24080a0; jvm 17.0.14+7-LTS
+2025-11-10 17:35:54 [main] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2025-11-10 17:35:54 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3c07e830{/api,null,AVAILABLE}
+2025-11-10 17:35:54 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@149d7cc6{HTTP/1.1, (http/1.1)}{0.0.0.0:7070}
+2025-11-10 17:35:54 [main] INFO  org.eclipse.jetty.server.Server - Started Server@7dd45c93{STARTING}[11.0.23,sto=0] @7808ms
+2025-11-10 17:35:54 [main] INFO  io.javalin.Javalin - Javalin started in 163ms \o/
+2025-11-10 17:35:54 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7070/api
+2025-11-10 17:35:54 [main] INFO  io.javalin.Javalin - You are running Javalin 6.3.0 (released August 22, 2024. Your Javalin version is 445 days old. Consider checking for a newer version.).
+2025-11-10 17:35:56 [JettyServerThreadPool-28] INFO  dat.config.ApplicationConfig -  Request 1 - POST /api/candidate/populate was handled with status code 200 OK
+2025-11-10 17:36:10 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 2 - POST /api/auth/login/ was handled with status code 401 Unauthorized
+2025-11-10 17:36:26 [JettyServerThreadPool-24] INFO  dat.config.ApplicationConfig -  Request 3 - POST /api/skill was handled with status code 401 Unauthorized
+2025-11-10 17:36:36 [JettyServerThreadPool-21] INFO  dat.config.ApplicationConfig -  Request 4 - POST /api/skill was handled with status code 401 Unauthorized
+2025-11-10 17:36:39 [JettyServerThreadPool-23] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505
+2025-11-10 17:36:39 [JettyServerThreadPool-23] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "candidate_phone_key"
+  Detail: Key (phone)=(0912345678) already exists.
+2025-11-10 17:36:39 [JettyServerThreadPool-23] ERROR dat.config.ApplicationConfig - An unhandled exception occurred
+2025-11-10 17:36:39 [JettyServerThreadPool-23] INFO  dat.config.ApplicationConfig -  Request 5 - POST /api/candidate/populate was handled with status code 200 OK

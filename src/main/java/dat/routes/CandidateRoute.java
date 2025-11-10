@@ -12,7 +12,7 @@ public class CandidateRoute {
     protected EndpointGroup getRoutes() {
         return () -> {
             // Specialized Endpoints
-            post("/populate", candidateController::populate, Role.ANYONE);
+            post("/populate", candidateController::populate, Role.USER); //ROLE.USER FOR TESTING CHANGE TO ADMIN WHEN DEPLOYED
             // Link existing Skill to Candidate
             put("/{candidateId}/skill/{skillId}", candidateController::addSkillToCandidate, Role.USER);
 

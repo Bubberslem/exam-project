@@ -45,6 +45,7 @@ public class CandidateController implements IController<CandidateDTO, Integer> {
         String categoryParam = ctx.queryParam("category");
         if (categoryParam != null && !categoryParam.isBlank()) {
             try {
+                // Convert to enum
                 Category category = Category.valueOf(categoryParam);
                 List<CandidateDTO> candidateDTOS = dao.readAllByCategory(category);
                 ctx.res().setStatus(200);
